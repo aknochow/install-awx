@@ -1,0 +1,8 @@
+---
+- name: Prepare Host for playbooks
+  hosts: localhost
+  tasks:  
+#
+  - name: Import prepare role
+    ansible.builtin.import_role:
+      name: prepare
