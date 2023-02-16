@@ -1,8 +1,13 @@
 # Install-AWX
 
-## Install AWX to a kubernetes cluster (tested on k3s, k3d, kind)
+## Install AWX to a kubernetes cluster
 
 `ansible-playbook install-awx.yaml`
+
+(Tested on):
+- k3s
+- k3d
+- kind
 
 ## Requirements
 1. Ansible
