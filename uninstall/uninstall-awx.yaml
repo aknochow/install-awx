@@ -1,0 +1,21 @@
+---
+- name: Uninstall AWX from Kubernetes Cluster
+  hosts: localhost
+  vars:
+    awx_name: awx-01
+    awx_namespace: "{{ awx_name }}"
+    delete_namespace: "True"
+#
+  tasks:  
+#
+  - name: Delete resources in awx namespce
+    ansible.builtin.shell:    
+      cmd: kubectl delete --ignore-not-found all --all -n {{ awx_namespace }}
+    ignore_errors: True
+ 
+  - name: Delete AWX Namespace
+    ansible.builtin.shell:
+      cmd: kubectl delete ns --ignore-not-found {{ item }} 
+    loop:
+      - "{{ awx_namespace }}"   
+    when: delete_namespace | bool  

@@ -1,0 +1,48 @@
+---
+- name: Create Artifacts Directories
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - artifacts
+    - artifacts/{{ awx_name }}
+    - artifacts/kustomization
+
+- name: Create Namespaces
+  kubernetes.core.k8s:
+    name: "{{ item }}"
+    kind: Namespace
+    state: present
+  loop:
+    - "{{ awx_namespace }}"
+
+- name: Create awx cr from templates
+  ansible.builtin.template:
+    src: templates/{{ item }}.j2
+    dest: artifacts/{{ awx_name }}/{{ item }}
+  loop:
+    - awx.yaml
+
+- name: Create manifests from templates
+  ansible.builtin.template:
+    src: templates/{{ item }}.j2
+    dest: artifacts/{{ item }}
+  loop:
+    - kustomization/kustomization.yaml
+
+- name: Create Operator from kustomization
+  kubernetes.core.k8s:
+    state: present
+    definition:  "{{ lookup('kubernetes.core.kustomize', dir='artifacts/kustomization') }}"
+    wait: yes
+
+- name: Create AWX
+  kubernetes.core.k8s:
+    state: present
+    src: artifacts/{{ awx_name }}/awx.yaml
+    wait: yes
+    wait_condition:
+      type: Running
+      status: "True"
+  loop:
+    - awx

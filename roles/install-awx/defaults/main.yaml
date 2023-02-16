@@ -1,0 +1,4 @@
+---
+awx_name: "awx-01"
+awx_namespace: "awx"
+awx_operator_tag: ""
