@@ -8,7 +8,7 @@ Run this playbook on a prepared host:
 ##
 
 
-_Tested on_:
+_k8s variants tested_:
 - k3s
 - k3d
 - kind
@@ -26,8 +26,6 @@ _Tested on_:
 ## Prepare playbook 
 
 `ansible-playbook prepare.yaml`
-
-(_tested on rhel/centos/fedora_)
 
 ## Uninstall AWX
 
