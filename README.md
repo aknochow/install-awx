@@ -23,7 +23,7 @@ _k8s variants tested_:
     - community.general 
     - kubernetes.core
 
-## Prepare playbook 
+## Prepare host automatically
 _This will install the requirements but may not work on systems with non-standard python installations_
 
 `ansible-playbook prepare.yaml`
