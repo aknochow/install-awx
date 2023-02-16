@@ -23,9 +23,11 @@ Run this playbook on a prepared host:
     - community.general 
     - kubernetes.core
 
-## Prepare playbook (tested on rhel/centos/fedora)
+## Prepare playbook 
 
 `ansible-playbook prepare.yaml`
+
+(_tested on rhel/centos/fedora)_:)
 
 ## Uninstall AWX
 
