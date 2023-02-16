@@ -1,6 +1,4 @@
-# install-awx
-
-## Install AWX
+# Install-AWX
 
 `ansible-playbook install-awx.yaml`
 
@@ -10,4 +8,4 @@
 
 ## Uninstall AWX
 
-`ansible-playbook uninstall-awx.yaml`
+`ansible-playbook uninstall/uninstall-awx.yaml`
