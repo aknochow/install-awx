@@ -24,6 +24,7 @@ _k8s variants tested_:
     - kubernetes.core
 
 ## Prepare playbook 
+_This will install the requirements but may not work on systems with non-standard python installations_
 
 `ansible-playbook prepare.yaml`
 
