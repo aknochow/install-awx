@@ -27,7 +27,7 @@ _Tested on_:
 
 `ansible-playbook prepare.yaml`
 
-(_tested on rhel/centos/fedora)_)
+(_tested on rhel/centos/fedora_)
 
 ## Uninstall AWX
 
