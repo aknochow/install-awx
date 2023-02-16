@@ -30,4 +30,10 @@ _This will install the requirements but may not work on systems with non-standar
 
 ## Uninstall AWX
 
+*This is a lazy temporary uninstall that removes everything in the namespace and then the namespace.*
+
+*I'm working on a proper 'un-deploy' playbook.*
+
+*Be careful with this...*
+
 `ansible-playbook uninstall/uninstall-awx.yaml`
