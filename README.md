@@ -2,7 +2,7 @@
 
 ## Install AWX to a kubernetes cluster
 
-Run this command on a prepared host:
+Run this playbook on a prepared host:
 
 `ansible-playbook install-awx.yaml`
 ##
