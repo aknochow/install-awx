@@ -8,7 +8,7 @@ Run this playbook on a prepared host:
 ##
 
 
-(_Tested on_:)
+_Tested on_:
 - k3s
 - k3d
 - kind
@@ -27,7 +27,7 @@ Run this playbook on a prepared host:
 
 `ansible-playbook prepare.yaml`
 
-(_tested on rhel/centos/fedora)_:)
+(_tested on rhel/centos/fedora)_)
 
 ## Uninstall AWX
 
