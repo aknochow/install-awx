@@ -2,7 +2,6 @@
 - name: Ensure pip is installed and upgraded
   ansible.builtin.shell:
     cmd: "{{ ansible_facts.python.executable }} -m ensurepip --upgrade"
-  become: true
 
 - name: Install python kubernetes plugin (required by kubernetes.core collection)
   ansible.builtin.pip:
@@ -10,4 +9,3 @@
   loop:
     - oauthlib>=3.2.0
     - kubernetes
-  become: true
