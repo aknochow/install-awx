@@ -7,14 +7,11 @@ Run this playbook on a prepared host:
 `ansible-playbook install-awx.yaml`
 ##
 
-
-_Production k8s tested_:
+k8s tested_:
 - IBM Cloud IKS
 > Choose an appropriate block storageclass for postgres.  Read more about block storage on IBM Kubernetes here: https://ibm.github.io/kubernetes-storage/Lab3/.  Example in awx cr:
 > - `postgres_storage_class: ibmc-block-bronze`
 - k3s
-
-_Development k8s tools tested_:
 - k3d
 - kind
 
