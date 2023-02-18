@@ -1,6 +1,6 @@
 # Install-AWX
 
-## Install AWX to a kubernetes cluster
+## Install AWX Operator to a kubernetes cluster
 
 Run this playbook on a prepared host:
 
