@@ -9,8 +9,11 @@ Run this playbook on a prepared host:
 
 k8s tested_:
 - IBM Cloud IKS
-> Choose an appropriate block storageclass for postgres.  Read more about block storage on IBM Kubernetes here: https://ibm.github.io/kubernetes-storage/Lab3/.  Example in awx cr:
-> - `postgres_storage_class: ibmc-block-bronze`
+> Choose an appropriate block storageclass for postgres. (https://ibm.github.io/kubernetes-storage/Lab3/)
+>
+> _Example in awx cr:_
+<
+>  `postgres_storage_class: ibmc-block-bronze`
 - k3s
 - k3d
 - kind
