@@ -1,0 +1,21 @@
+---
+- name: Uninstall AWX from Kubernetes Cluster
+  hosts: localhost
+  vars:
+    awx_hostname: ""
+#
+  tasks:  
+#
+  - name: Uninstall AWX - {{ awx_hostname }}
+    kubernetes.core.k8s:
+      state: absent
+      src: artifacts/{{ awx_hostname }}/awx.yaml
+      wait: yes
+
+  - name: Uninstall Operator Deployment using kustomization
+    kubernetes.core.k8s:
+      state: absent
+      definition:  "{{ lookup('kubernetes.core.kustomize', dir='artifacts/'+awx_hostname+'/kustomization') }}"
+      wait: yes
+
+

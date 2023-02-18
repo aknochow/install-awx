@@ -3,9 +3,8 @@
   hosts: localhost
   vars:
     awx_name: awx-01
-    awx_nodeport: 30080
+    awx_operator_tag: "1.2.0"
     awx_namespace: "{{ awx_name }}"
-    awx_operator_tag: "1.1.4"
     awx_hostname: "{{ awx_name }}.{{ dns_domain }}"
     dns_domain: "{{ ansible_facts['nodename'] }}"
 #
