@@ -6,7 +6,7 @@ Run this playbook on a prepared host:
 
 `ansible-playbook install-awx.yaml`
 
-Obtain the admin password by exporting your deployed awx_name and then getting the secret from the cluster:
+Obtain the admin password by getting the secret from the cluster:
 `kubectl -n awx get secret awx-admin-password -o jsonpath='{.data.password}' | base64 --decode`
 
 ##
