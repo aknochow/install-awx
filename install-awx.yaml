@@ -2,9 +2,9 @@
 - name: Install AWX to Kubernetes Cluster
   hosts: localhost
   vars:
-    awx_name: awx-01
+    awx_name: awx
     awx_operator_tag: "1.2.0"
-    awx_namespace: "{{ awx_name }}"
+    awx_namespace: awx
     awx_hostname: "{{ awx_name }}.{{ dns_domain }}"
     dns_domain: "{{ ansible_facts['nodename'] }}"
 #
