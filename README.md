@@ -54,4 +54,4 @@ ansible-playbook prepare.yaml
 
 *Be careful with this...*
 
-`ansible-playbook uninstall-awx.yaml` -e "awx_hostname=thehostnameinyourartifactsdiryouwanttouninstall"
+`ansible-playbook uninstall-awx.yaml -e "awx_hostname=thehostnameinyourartifactsdiryouwanttouninstall"`
