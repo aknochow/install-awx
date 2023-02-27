@@ -6,9 +6,7 @@ metadata:
   namespace: {{ awx_namespace }}
 spec:
   hostname: {{ awx_hostname }}
+  image: {{ awx_image }}
+  image_version: {{ awx_image_tag }}
   service_type: nodeport
   ingress_type: ingress
-  redis_image: quay.io/aknochow/redis
-  redis_image_version: "7"
-  postgres_image: quay.io/aknochow/postgres
-  postgres_image_version: "13"
