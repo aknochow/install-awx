@@ -1,5 +1,5 @@
 #!/bin/sh
 
-ansible-galaxy collection install -r requirements.yaml
+ansible-galaxy collection install community.general kubernetes.core
 
 ansible-playbook prepare.yaml
